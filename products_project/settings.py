@@ -70,7 +70,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'products_project.wsgi.application'
 
-
+REST_FRAMEWORK = {
+    'COERCE_DECIMAL_TO_STRING': False
+}
 
 
 
@@ -116,6 +118,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 try:
-    from products_project.local_setting import *
+    from products_project.local_settings import *
 except ImportError:
     pass    
